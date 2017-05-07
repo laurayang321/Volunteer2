@@ -8,24 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8D144DCB1EBEE7E5009C531C /* PostStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D144DCA1EBEE7E5009C531C /* PostStoryController.swift */; };
+		8D144DCE1EBF0AB9009C531C /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D144DCD1EBF0AB9009C531C /* Story.swift */; };
+		8D144DD41EBF1708009C531C /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D144DD31EBF1708009C531C /* StoryCell.swift */; };
+		8D144DD61EBF1733009C531C /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D144DD51EBF1733009C531C /* CustomTabBarController.swift */; };
 		B3A3B30F1EBADB9900E20C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A3B30E1EBADB9900E20C30 /* AppDelegate.swift */; };
-		B3A3B3111EBADB9900E20C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A3B3101EBADB9900E20C30 /* ViewController.swift */; };
+		B3A3B3111EBADB9900E20C30 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A3B3101EBADB9900E20C30 /* FeedController.swift */; };
 		B3A3B3141EBADB9900E20C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A3B3121EBADB9900E20C30 /* Main.storyboard */; };
 		B3A3B3161EBADB9900E20C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3A3B3151EBADB9900E20C30 /* Assets.xcassets */; };
 		B3A3B3191EBADB9900E20C30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A3B3171EBADB9900E20C30 /* LaunchScreen.storyboard */; };
-		B3E99D2F1EBEA4C5007E5554 /* CustomTabBarContraoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E99D2E1EBEA4C5007E5554 /* CustomTabBarContraoller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D144DCA1EBEE7E5009C531C /* PostStoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostStoryController.swift; sourceTree = "<group>"; };
+		8D144DCD1EBF0AB9009C531C /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		8D144DD31EBF1708009C531C /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		8D144DD51EBF1733009C531C /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		B3A3B30B1EBADB9900E20C30 /* 4900.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4900.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A3B30E1EBADB9900E20C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3A3B3101EBADB9900E20C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3A3B3101EBADB9900E20C30 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		B3A3B3131EBADB9900E20C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3A3B3151EBADB9900E20C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3A3B3181EBADB9900E20C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3A3B31A1EBADB9900E20C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3E99D2E1EBEA4C5007E5554 /* CustomTabBarContraoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTabBarContraoller.swift; path = ../CustomTabBarContraoller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D144DCC1EBF0A82009C531C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D144DCD1EBF0AB9009C531C /* Story.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		B3A3B3021EBADB9900E20C30 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +70,16 @@
 		B3A3B30D1EBADB9900E20C30 /* 4900 */ = {
 			isa = PBXGroup;
 			children = (
+				8D144DCC1EBF0A82009C531C /* Models */,
 				B3A3B30E1EBADB9900E20C30 /* AppDelegate.swift */,
-				B3A3B3101EBADB9900E20C30 /* ViewController.swift */,
-				B3E99D2E1EBEA4C5007E5554 /* CustomTabBarContraoller.swift */,
+				B3A3B3101EBADB9900E20C30 /* FeedController.swift */,
 				B3A3B3121EBADB9900E20C30 /* Main.storyboard */,
 				B3A3B3151EBADB9900E20C30 /* Assets.xcassets */,
 				B3A3B3171EBADB9900E20C30 /* LaunchScreen.storyboard */,
 				B3A3B31A1EBADB9900E20C30 /* Info.plist */,
 				8D144DCA1EBEE7E5009C531C /* PostStoryController.swift */,
+				8D144DD31EBF1708009C531C /* StoryCell.swift */,
+				8D144DD51EBF1733009C531C /* CustomTabBarController.swift */,
 			);
 			path = 4900;
 			sourceTree = "<group>";
@@ -102,7 +116,7 @@
 				TargetAttributes = {
 					B3A3B30A1EBADB9900E20C30 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = EX2NY352P2;
+						DevelopmentTeam = K7ZJGV24JX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -143,10 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E99D2F1EBEA4C5007E5554 /* CustomTabBarContraoller.swift in Sources */,
-				B3A3B3111EBADB9900E20C30 /* ViewController.swift in Sources */,
+				B3A3B3111EBADB9900E20C30 /* FeedController.swift in Sources */,
 				B3A3B30F1EBADB9900E20C30 /* AppDelegate.swift in Sources */,
+				8D144DD61EBF1733009C531C /* CustomTabBarController.swift in Sources */,
 				8D144DCB1EBEE7E5009C531C /* PostStoryController.swift in Sources */,
+				8D144DCE1EBF0AB9009C531C /* Story.swift in Sources */,
+				8D144DD41EBF1708009C531C /* StoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +287,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EX2NY352P2;
+				DEVELOPMENT_TEAM = K7ZJGV24JX;
 				INFOPLIST_FILE = 4900/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leo.-900";
+				PRODUCT_BUNDLE_IDENTIFIER = bcit.ca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -284,10 +301,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EX2NY352P2;
+				DEVELOPMENT_TEAM = K7ZJGV24JX;
 				INFOPLIST_FILE = 4900/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leo.-900";
+				PRODUCT_BUNDLE_IDENTIFIER = bcit.ca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

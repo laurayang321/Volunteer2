@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,20 +39,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gi-mF-0MB">
-                                <rect key="frame" x="117" y="119" width="121" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gi-mF-0MB">
+                                <rect key="frame" x="49" y="47" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ftk-YI-Htf">
+                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="sUI-5l-wQ2">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCell" id="6X7-R3-mCK" userLabel="Story Cell" customClass="StoryCell" customModule="_900" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bpj-Hx-7fa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Bpj-Hx-7fa" firstAttribute="top" secondItem="6X7-R3-mCK" secondAttribute="top" id="7WB-yC-xwc"/>
+                                            <constraint firstItem="Bpj-Hx-7fa" firstAttribute="leading" secondItem="6X7-R3-mCK" secondAttribute="leading" id="LRj-n4-wue"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bpj-Hx-7fa" secondAttribute="trailing" id="gdf-rG-4Gr"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bpj-Hx-7fa" secondAttribute="bottom" id="jN7-DG-gh5"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="storyImage" destination="Bpj-Hx-7fa" id="CLQ-dJ-Zi1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Input the title..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81k-qC-Uw4">
+                                <rect key="frame" x="49" y="76" width="119" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvE-hs-UA7">
+                                <rect key="frame" x="55" y="139" width="159" height="30"/>
+                                <state key="normal" title="Add photo from Library"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OvE-hs-UA7" firstAttribute="top" secondItem="81k-qC-Uw4" secondAttribute="bottom" constant="33" id="0JV-Lm-lod"/>
+                            <constraint firstItem="81k-qC-Uw4" firstAttribute="top" secondItem="2gi-mF-0MB" secondAttribute="bottom" constant="8" symbolic="YES" id="8lT-k5-D4H"/>
+                            <constraint firstItem="OvE-hs-UA7" firstAttribute="centerX" secondItem="EaF-T2-IUR" secondAttribute="centerX" constant="-53" id="G4i-t9-Ha0"/>
+                            <constraint firstItem="81k-qC-Uw4" firstAttribute="leading" secondItem="2gi-mF-0MB" secondAttribute="leading" id="GQf-iJ-VID"/>
+                            <constraint firstAttribute="trailing" secondItem="ftk-YI-Htf" secondAttribute="trailing" id="MDR-q7-njZ"/>
+                            <constraint firstItem="ftk-YI-Htf" firstAttribute="leading" secondItem="EaF-T2-IUR" secondAttribute="leading" id="OSv-bd-DbH"/>
+                            <constraint firstItem="ftk-YI-Htf" firstAttribute="top" secondItem="OvE-hs-UA7" secondAttribute="bottom" constant="46" id="hfU-ym-WCe"/>
+                            <constraint firstItem="81k-qC-Uw4" firstAttribute="top" secondItem="EaF-T2-IUR" secondAttribute="top" constant="76" id="hpe-yI-V0a"/>
+                            <constraint firstItem="81k-qC-Uw4" firstAttribute="leading" secondItem="EaF-T2-IUR" secondAttribute="leadingMargin" constant="33" id="r0u-03-2X3"/>
+                            <constraint firstItem="DeW-cH-CsW" firstAttribute="top" secondItem="ftk-YI-Htf" secondAttribute="bottom" id="sHn-tQ-soE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ftk-YI-Htf" id="V9W-9R-6BQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reA-Bs-wsf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="139"/>
+            <point key="canvasLocation" x="829.60000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="10" width="1340" height="873"/>
+    </resources>
 </document>
